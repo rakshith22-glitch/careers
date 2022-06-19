@@ -1,38 +1,122 @@
 .App {
+  font-family: sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+section {
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+#about,
+#team,
+#mission, #sidebar {
+  color: #3b3b3c;
+  background: #eaf2fa;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+.nav {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -5px;
+  z-index: 1;
+  height: 70px;
+  min-height: 70px;
+  width: calc(100% );
+  background-color: #fff;
+  box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
+}
+
+.nav1 {
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -5px;
+  z-index: 1;
+  height: 70px;
+  min-height: 70px;
+  width: calc(100% );
+  background-color: rgb(143, 142, 142);
+  box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
+
+}
+.nav__container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+
+  position: relative;
+  
+}
+
+.nav__container__actions {
+  display: flex;
+  flex-flow: row nowrap;
+  padding-left: 2%;
+  flex: 1;
+}
+
+.active {
+  font-weight: bold;
+}
+
+ul {
+  display: flex;
+  gap: 1rem;
+  font-size: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+}
+
+li:hover {
+  text-decoration: underline;
+}
+.container{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  place-items:center;
+  gap:10px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 2em;
+  width: 80%;
+  flex-wrap: wrap;
+  max-width: 1440px; /* whatever you desire */
+  margin-left: auto; /* center the container */
+  margin-right: auto;
+ 
+}
+.container2{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+  place-items:center;
+  gap:40px;
+}
+
+.item{
+  display:table-cell;
+  
+  
+}
+
+.footer {
+  background-color: green;
+  border-top:2px solid red;
+  position: relative;
+  width: 100%;
+  bottom: 0;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  font-size: 25px;
+ }
