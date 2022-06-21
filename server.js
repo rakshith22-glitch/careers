@@ -19,7 +19,7 @@ app.listen(port, () => console.log(`Listening on port ${port}`)); //Line 6
 app.get("/", (req, res) => {
   //Line 9
   res.send({ express: "YOUR EXPRESS BACKEND IS CONNECTED TO REACT" }); //Line 10
-}); //L
+});
 
 app.get("/team_members", (req, res) => {
   //Line 9
@@ -111,7 +111,7 @@ app.get("/team_members", (req, res) => {
       },
     ],
   }); //Line 10
-}); //L
+});
 
 app.get("/jobs", (req, res) => {
   //Line 9
@@ -169,7 +169,7 @@ app.get("/jobs", (req, res) => {
       },
     ],
   }); //Line 10
-}); //L
+});
 
 var JobApplications = {};
 

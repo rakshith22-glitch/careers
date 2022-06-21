@@ -1,5 +1,5 @@
 .App {
-  font-family: sans-serif;
+  font-family: montserrat;
   text-align: center;
 }
 
@@ -29,8 +29,9 @@ section {
   height: 70px;
   min-height: 70px;
   width: calc(100% );
-  background-color: #fff;
+  background-color: rgb(143, 142, 142);
   box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
+  
 }
 
 .nav1 {
@@ -45,6 +46,7 @@ section {
   background-color: rgb(143, 142, 142);
   box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
 
+  
 }
 .nav__container {
   display: flex;
@@ -53,7 +55,7 @@ section {
   justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
-
+  color: white;
   position: relative;
   
 }
@@ -63,10 +65,12 @@ section {
   flex-flow: row nowrap;
   padding-left: 2%;
   flex: 1;
+  color: white;
 }
 
 .active {
   font-weight: bold;
+  color: black;
 }
 
 ul {
@@ -96,7 +100,19 @@ li:hover {
   max-width: 1440px; /* whatever you desire */
   margin-left: auto; /* center the container */
   margin-right: auto;
- 
+}
+
+.containerjobs{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  place-items:center;
+  gap:30px;
+  justify-content: center;
+  width: 90%;
+  
+  max-width: 1640px; /* whatever you desire */
+  margin-left: auto; /* center the container */
+  margin-right: auto;
 }
 .container2{
   display:grid;
@@ -107,13 +123,10 @@ li:hover {
 
 .item{
   display:table-cell;
-  
-  
+  padding: 10px;
 }
 
 .footer {
-  background-color: green;
-  border-top:2px solid red;
   position: relative;
   width: 100%;
   bottom: 0;

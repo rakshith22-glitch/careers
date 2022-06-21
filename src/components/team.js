@@ -32,9 +32,9 @@ function Team() {
   }, []);
 
   return (
-    <div style={{ textAlign: "center", height: "110vh" }}>
+    <div style={{ height: "200vh", textAlign: "center" }}>
       <div>
-        <h1> TEAM </h1>
+        <h1 style={{ fontSize: 44, textAlign: "center" }}> TEAM </h1>
       </div>
       <div className="container">
         {teamdata.map((item, i) => {
@@ -47,7 +47,7 @@ function Team() {
               style={{ textAlign: "center" }}
             >
               <div>
-                <img src={logo} style={{ width: "80%" }} />
+                <img src={logo} style={{ width: "60%" }} />
               </div>
               <p style={{ fontSize: 12 }}>
                 {" "}

@@ -21,11 +21,14 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./sidebar.css";
 import axios from "axios";
+import Alert from "@mui/material/Alert";
+import AlertTitle from "@mui/material/AlertTitle";
 const theme = createTheme();
 
 function SideBar({ handleDrawerClose, job, id, url }) {
   const [Status, setStatus] = useState("");
-
+  const [StatusMessage, setStatusMessage] = useState("");
+  let Alerttype;
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -37,13 +40,38 @@ function SideBar({ handleDrawerClose, job, id, url }) {
       })
       .then((response) => {
         // console.log(response.data.message);
-        setStatus(response.data.message);
+        setStatus(response.data.status);
+        setStatusMessage(response.data.message);
       })
       .catch((err) => {
         console.log(err);
       });
   };
-
+  console.log(Status);
+  console.log(StatusMessage);
+  if (Status === 400) {
+    Alerttype = (
+      <h1>
+        <Alert severity="error">
+          <AlertTitle>Error</AlertTitle>
+          {StatusMessage}
+        </Alert>
+      </h1>
+    );
+  }
+  if (Status === 200) {
+    Alerttype = (
+      <h1>
+        <Alert severity="success">
+          <AlertTitle>{StatusMessage}</AlertTitle>
+          {}
+        </Alert>
+      </h1>
+    );
+  }
+  if (Status === "") {
+    Alerttype = <h1> </h1>;
+  }
   return (
     <div>
       <div style={{ textAlign: "center" }}>
@@ -122,7 +150,7 @@ function SideBar({ handleDrawerClose, job, id, url }) {
                 </Button>
               </Box>
             </Box>
-            <h1> {Status}</h1>
+            {Alerttype}
           </Container>
         </ThemeProvider>
       </div>

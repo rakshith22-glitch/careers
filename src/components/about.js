@@ -18,24 +18,22 @@ function About() {
   }
   return (
     <Container
-      style={{ textAlign: "center", height: "50vh", marginTop: "10%" }}
+      style={{
+        textAlign: "center",
+      }}
     >
-      <h1> About</h1>
+      <h1 style={{ fontSize: 44 }}> ABOUT</h1>
       <Box
         sx={{
-          display: "flex",
           justifyContent: "center",
-          p: 1,
-          m: 1,
-
-          borderRadius: 1,
+          fontSize: 22,
         }}
       >
         <Item>
           {" "}
           By using Qvin, you're actively helping our healthcare system
           understand women's bodies and craft care that positively impacts lives
-          for the generations to come. <br />
+          for the generations to come.
           <br /> We know that together, we can change the world. At Qvin, you
           will make an impact on the future of women's health and carve your
           path as a leader, innovator, and change-maker. <br /> <br />

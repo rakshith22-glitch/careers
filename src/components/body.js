@@ -12,7 +12,7 @@ function Bod() {
   return (
     <Container maxWidth="x-lg">
       <Head />
-      <div
+      {/* <div
         style={{
           backgroundImage: `url("https://careers.qvin.com/uploads/1/2/3/5/123547525/background-images/800799635.png")`,
           backgroundRepeat: "yes-repeat",
@@ -20,7 +20,7 @@ function Bod() {
           height: "200px",
           color: "blue",
         }}
-      ></div>
+      ></div> */}
       <section id="about">
         <About />
       </section>

@@ -48,14 +48,20 @@ function Jobs() {
 
   const handleDrawerClose = () => {
     setOpen(false);
+    setjob(null);
+    setid(null);
+    seturl(null);
   };
   return (
     <div style={{ textAlign: "center" }}>
-      <h1>Join a mission that matters </h1>
-      <div className="container">
+      <h1 style={{ fontSize: 44, textAlign: "center" }}>
+        JOIN A MISSION THAT MATTERS{" "}
+      </h1>
+      <div className="containerjobs">
         {jobs.map((item, i) => {
           return (
-            <p
+            <Button
+              variant="outlined"
               key={item.id}
               className="item"
               style={{ textDecoration: "underline", cursor: "pointer" }}
@@ -63,7 +69,7 @@ function Jobs() {
             >
               {" "}
               {item.Job}
-            </p>
+            </Button>
           );
         })}
       </div>
