@@ -64,7 +64,12 @@ function Jobs() {
               variant="outlined"
               key={item.id}
               className="item"
-              style={{ textDecoration: "underline", cursor: "pointer" }}
+              style={{
+                textDecoration: "underline",
+                cursor: "pointer",
+                backgroundColor: "#85dcb8",
+                color: "black",
+              }}
               onClick={() => handleDrawerOpen(item)}
             >
               {" "}

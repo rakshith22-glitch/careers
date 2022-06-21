@@ -7,7 +7,6 @@ function Mission() {
       style={{
         textAlign: "center",
 
-        marginTop: "10%",
         fontSize: "22",
       }}
     >

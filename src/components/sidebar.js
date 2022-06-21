@@ -75,7 +75,10 @@ function SideBar({ handleDrawerClose, job, id, url }) {
   return (
     <div>
       <div style={{ textAlign: "center" }}>
-        <IconButton onClick={handleDrawerClose}>
+        <IconButton
+          style={{ backgroundColor: "#c38d9e", margin: "10px" }}
+          onClick={handleDrawerClose}
+        >
           <CloseIcon />
         </IconButton>
       </div>
@@ -94,11 +97,13 @@ function SideBar({ handleDrawerClose, job, id, url }) {
                 alignItems: "center",
               }}
             >
-              <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+              <Avatar sx={{ m: 1, bgcolor: "#c38d9e" }}>
                 <Typography variant="h6"></Typography>
                 <WorkIcon />
               </Avatar>
-              <a href={url}>{job} </a>
+              <a href={url} style={{ color: "black" }}>
+                {job}{" "}
+              </a>
               <Typography component="h1" variant="h5"></Typography>
               <Box
                 component="form"
@@ -143,8 +148,9 @@ function SideBar({ handleDrawerClose, job, id, url }) {
                 <Button
                   type="submit"
                   fullWidth
-                  variant="contained"
+                  variant="outlined"
                   sx={{ mt: 3, mb: 2 }}
+                  style={{ backgroundColor: " #c38d9e", color: "black" }}
                 >
                   Submit
                 </Button>

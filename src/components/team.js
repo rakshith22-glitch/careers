@@ -32,7 +32,7 @@ function Team() {
   }, []);
 
   return (
-    <div style={{ height: "200vh", textAlign: "center" }}>
+    <div style={{ textAlign: "center" }}>
       <div>
         <h1 style={{ fontSize: 44, textAlign: "center" }}> TEAM </h1>
       </div>
@@ -41,11 +41,7 @@ function Team() {
           let logo = item.pictures;
 
           return (
-            <div
-              key={item.Name}
-              className="item"
-              style={{ textAlign: "center" }}
-            >
+            <div key={item.Name} className="item">
               <div>
                 <img src={logo} style={{ width: "60%" }} />
               </div>
